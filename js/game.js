@@ -2,11 +2,11 @@ let x = document.querySelector(".user-tool");
 
 // box dan header info
 let vs = document.getElementById("versus");
-let winBox = document.getElementById('box');
+let box = document.getElementById('box');
 
 
 function resultObject() {
-    winBox.classList.add('winBox'),
+    box.classList.add('winBox'),
         vs.setAttribute("style", "font-size:36px; color:white;");
 
 }
@@ -36,7 +36,7 @@ let comBatu = document.getElementById('comBatu');
 let comKertas = document.getElementById('comKertas');
 let comGunting = document.getElementById('comGunting');
 
-function comThink() {
+function comAcak() {
     let pilih = ['Batu', 'Gunting', 'Kertas'];
     let pilihAcak = Math.floor(Math.random() * 3);
     return pilih[pilihAcak];
@@ -46,7 +46,7 @@ function comThink() {
 // disini di suit nya
 function suitDisini(player) {
 
-    const com = comThink();
+    const com = comAcak();
     console.log("Player Memilih => " + player);
     console.log("Com Memilih => " + com);
 
@@ -127,8 +127,8 @@ refresh.addEventListener('click', function() {
         removeCursor.removeAttribute("style", "cursor: not-allowed;pointer-events: none;")
 
     })
-    winBox.classList.remove('winBox');
-    winBox.classList.remove('drawBox');
+    box.classList.remove('winBox');
+    box.classList.remove('drawBox');
     vs.removeAttribute("style", "color: ''; font-size:'' ")
 
     vs.style.marginTop = null
